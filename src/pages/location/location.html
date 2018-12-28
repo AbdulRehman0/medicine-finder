@@ -1,0 +1,34 @@
+<!--
+  Generated template for the LocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Find Location</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding style="background-color: #ecf0f1;">
+
+    <div>
+        <ion-list>
+            <ion-item style="background-color: #ecf0f1;" >
+                <ion-label floating>   <ion-icon name="locate"></ion-icon>Your Current Location</ion-label>
+                <ion-input type="text" [(ngModel)]="start"></ion-input>
+            </ion-item>
+            <ion-item style="background-color: #ecf0f1;">
+                    <ion-label floating>End</ion-label>
+                    <ion-input type="text" [(ngModel)]="end"></ion-input>
+                </ion-item>
+                <button ion-button full round color="secondary" (click)="calculateAndDisplayRoute()">Get Direction</button>
+        </ion-list> 
+       <p> {{start}} {{end}}</p>
+      <p>{{lat}}{{long}}</p>
+</div>
+<div #map id="map">   
+</div>
+
+</ion-content>

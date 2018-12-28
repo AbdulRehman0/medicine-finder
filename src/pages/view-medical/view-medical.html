@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ViewMedicalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title> Medical Name</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-color: #ecf0f1;">
+    <ion-row>
+      <ion-col col-12>
+          <ion-card>
+              <img   width="50"  src="../../assets/imgs/pharmacy.png"/>
+              <ion-card-header  center>
+                <h1>  <ion-icon ios="ios-medical" md="md-medical"></ion-icon> AL Ameen Medical  </h1>
+              </ion-card-header>
+              <ion-card-content>
+                  <h2><b> <ion-icon ios="ios-call" md="md-call"> Phone: </ion-icon> </b>  03122453993</h2>
+                    <br>
+                  <h2><b> <ion-icon ios="ios-home" md="md-home"> Address: </ion-icon> </b> r-266 pak kausar town malir extension colony karachi</h2>
+                <!-- Add card content here! -->
+              </ion-card-content>
+            </ion-card>
+          <button ion-button  full round  color="secondary"   (click)="location()">   <ion-icon ios="ios-locate" md="md-locate"> Find  Location</ion-icon> </button>
+          <p>Note:We Suggest You to call first .</p>
+          <!-- <button ion-button  full round >   <ion-icon ios="ios-home" lg="lg-home"></ion-icon>  </button> -->
+      </ion-col>
+    </ion-row>
+
+</ion-content>

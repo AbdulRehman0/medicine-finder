@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #ecf0f1;">
+
+<!-- <google-map></google-map> -->
+<ion-searchbar placeholder="search medicine" (ionInput)="getItems($event)" ></ion-searchbar>
+<!-- <ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list> -->
+
+<!-- <ion-row>
+  <ion-col *ngFor="let store of medicalstores"  class="quick-fact-col" col-6 >
+    
+    <ion-card  >
+ <img src="{{store.image}}"/>
+ <ion-card-title>
+    {{store.name | slice:0:10}}
+    <span *ngIf="store.name.length >10 ">...</span>
+  </ion-card-title>
+ <ion-card-content>
+    <button ion-button color="secondary" small class="padding-left:10px;">View Medical</button>
+ </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row> -->
+
+<ion-list >
+  <ion-item *ngFor="let store of medicalstores" style="background-color: #ecf0f1;">
+    <ion-thumbnail item-start>
+      <img src="{{store.image}}"/>
+      
+    </ion-thumbnail>
+    <h2>{{store.name}}</h2>
+    <p> {{store.address | slice:0:20}}</p>
+    <!-- <span *ngIf="store.address.length >20 ">...</span> -->
+    <button ion-button clear color="dark"item-end (click)="openMedical(store.id)" >View</button>
+  </ion-item>
+</ion-list>
+
+<!-- <google-map></google-map> -->
+
+</ion-content>
